@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
+//The counter will allow to increase or decrese value in the range of 0 to 20
 function App() {
   // let counter = 5
   let [counter, setCounter] = useState(15)
@@ -10,11 +12,15 @@ function App() {
   const addValue = () => {
     // console.log("Clicked", counter);
     // counter++;
-    setCounter(counter + 1);
+    if(counter<20){
+      setCounter(counter + 1);
+    }
   }
 
   const reduceValue = () => {
-    setCounter(counter-1);
+    if(counter>0){
+      setCounter(counter-1);
+    }
   }
 
   return (
